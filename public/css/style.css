@@ -1,0 +1,13 @@
+.list-group-item {
+    line-height: 2.5;
+  }
+  
+body {
+background-color: #FFF9E3;    
+font-family: 'Open Sans', sans-serif;
+
+}
+#burger-in {
+width: 300px; height: auto; margin:0 auto; text-align:center; align-content:center; background-color: rgb(3, 167, 218); border-radius:20px;
+}
+

@@ -1,0 +1,35 @@
+  <h1>Time to eat Burgeeeerrrrsssss</h1>
+  <h2>Burgers Left to Devour</h2>
+  <ul>
+    {{#each burgers}}
+    {{log this}}
+    {{#unless this.eaten}}
+    <li>{{name}} <button data-id={{this.id}} class="devour-burger">Devour me!</button></li>
+    {{/unless}}
+    {{/each}}
+  </ul>
+
+  <h2>Burgers Eaten</h2>
+  <ul>
+
+    {{#each burgers}}
+    {{#if this.eaten}}
+    <li>{{name}} <button data-id={{this.id}} class="delete-burger">Delete Burgy!</button></li>
+    {{/if}}
+    {{/each}}
+  </ul>
+
+  <div class="row" id="burger-in"
+    style="width: 300px; height: auto; margin:0 auto; text-align:center; align-content:center; background-color: rgb(3, 167, 218); border-radius:20px;">
+    <br>
+    <h2>Add a burger</h2>
+    <div class="col-5">
+      <form class="create-form" style="margin:20px;">
+        <div class="form-group" style="margin:10px;">
+          <label for="burger" style="">Burger Name:</label>
+          <input type="text" id="name-in" name="name" style="margin:20px;height:30px;">
+        </div>
+        <button type="submit" style="margin:10px;">Add Burger</button>
+      </form>
+    </div>
+  </div>

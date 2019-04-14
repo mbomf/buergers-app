@@ -1,0 +1,28 @@
+{
+    "name": "burgers-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.16.4",
+        "express-handlebars": "^3.0.2",
+        "mysql": "^2.16.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.11"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-dev": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mbomf/burgers-app.git"
+    },
+    "author": "MBO @mbomf",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mbomf/burgers-app/issues"
+    },
+    "homepage": "https://github.com/mbomf/burgers-app#readme"
+}
