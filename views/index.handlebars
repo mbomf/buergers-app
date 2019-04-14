@@ -1,30 +1,39 @@
-  <div class="row">
+<body style="background-image: url('https://media.timeout.com/images/103902673/image.jpg'); position: fixed; top: 0;left: 0; min-width: 100%;min-height: 100%; color:white;">
+
+
+  <div class="row" style="">
     <div class="col-s12" style="margin:0 auto; text-align:center;font-family: 'Pacifico', cursive;">
-  <h1>Time to eat Burgeeeerrrrsssss</h1>
+      <h1>Time to eat Burgeeeerrrrsssss</h1>
 
     </div>
   </div>
 
-  <h2>Burgers Left to Devour</h2>
-  <ul>
-    {{#each burgers}}
-    {{log this}}
-    {{#unless this.eaten}}
-    <li>{{name}} <button data-id={{this.id}} class="devour-burger">Devour me!</button></li>
-    {{/unless}}
-    {{/each}}
-  </ul>
+  <div class="row">
+    <div class="col-s6" id="burgers-to-devour">
+      <h2>Burgers Left to Devour</h2>
+      <ul>
+        {{#each burgers}}
+        {{log this}}
+        {{#unless this.eaten}}
+        <li>{{name}} <button data-id={{this.id}} class="devour-burger">Devour me!</button></li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
-  <h2>Burgers Eaten</h2>
-  <ul>
+    <div class="col-s6" id="burgers-eaten">
+      <h2>Burgers Left to Devour</h2>
+      <h2>Burgers Eaten</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if this.eaten}}
+        <li>{{name}} <button data-id={{this.id}} class="delete-burger">Delete Burgy!</button></li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
 
-    {{#each burgers}}
-    {{#if this.eaten}}
-    <li>{{name}} <button data-id={{this.id}} class="delete-burger">Delete Burgy!</button></li>
-    {{/if}}
-    {{/each}}
-  </ul>
-
+  </div>
   <div class="row" id="burger-in"
     style="width: 300px; height: auto; margin:0 auto; text-align:center; align-content:center; background-color: rgb(3, 167, 218); border-radius:20px;">
     <br>
@@ -39,3 +48,5 @@
       </form>
     </div>
   </div>
+
+</body>
